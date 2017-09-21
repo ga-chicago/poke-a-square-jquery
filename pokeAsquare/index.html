@@ -12,9 +12,9 @@
   <header>
     <div>
       <h1>scoreboard: 0</h1>
-      <span id="timer">timer: 30s</span>
+      <span id="timer">timer: 10s</span>
       <span id="round">round: 1</span>
-      <button>Begin</button>
+      <button id = "start">Begin</button>
     </div>
 
   </header>
@@ -23,15 +23,15 @@
 
   </div>
 
-
-
-
-
-
-
-
-
-
-<script src="scripts/app.js"></script>
+<div class ="closed">
+  <div class="modal" id="modal">
+    <button class="close-button" id="close-button">Exit Out</button>
+    <div class = "modal-guts" id="modal-guts">
+      <h2></h2>
+      <h3></h3>
+    </div>
+  </div>
+</div>
+  <script src="scripts/app.js"></script>
 </body>
 </html>
