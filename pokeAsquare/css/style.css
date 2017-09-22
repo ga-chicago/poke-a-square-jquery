@@ -23,3 +23,15 @@ button {
   float: right;
   margin-right: 50%;
 }
+
+.modalActive  {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: purple;
+  color: white;
+}
+.hiddenModal {
+  display: none;
+}
