@@ -4,6 +4,10 @@ let round = 1; // Same reason as above
 
 // When we click the begin button, the timer should start
 $('button').on('click', () => {
+	if (round > 1){
+		$('.modal-overlay').hide();
+		$('.active-modal').hide();
+	}
 	setTimer();
 	setupRound();
 })
@@ -78,6 +82,10 @@ const setTimer = () => {
 
 		if (time === 0){
 			clearInterval(timer); // ends the countdown
+			$('.modal-overlay').show();
+			$('.active-modal').show();
+			$('#modal-round').text(`That's the end of Round ${round}. Let's see how you did:`);
+			$('#blue-squares').text(`In the time that was given to you, you were able to achieve a score of ${score}! If you want a tougher challenge, click the "Next Round?" button to start the next level. Thanks for playing!`);
 			round++; // increases round by one, though it's only visable after setupRound function
 		}
 
@@ -112,10 +120,11 @@ const setupRound = () => {
 }
 
 
-
+// EXTRA CREDIT: START
 // Make the squares lose transparency during each round so you have to click faster.
 
-// Make a Modal to gather the players name at the beginning of the game, and leave them a greeting in the header
+// Make a Modal to gather the players name at the beginning of the game, and leave them a greeting
+// in the header
 
 // Style it make it look nice
 
@@ -123,14 +132,16 @@ const setupRound = () => {
 
 // have a modal pop up at the begining of a ready so the user knows how to continue
 
-// make a section about how to play the game (how do you want to do that? an About page, in the header, a modal, idk???? anything you can imagine)
+// make a section about how to play the game (how do you want to do that? an About page, in the header,
+// a modal, idk???? anything you can imagine)
+// EXTRA CREDIT: END
 
 
 
-// 1. Create a Modal
-// (pop up window in the center of the screen at the end of each round)
+// Create a Modal
+	// The modal will be a pop up window in the center of the screen at the end of each round
 	// It will appear when the timer reaches 0
-// Leave a message that mentions the round they went through and the score they reached
+	// Leave a message that mentions the round they went through and the score they reached
 	// You'll display some text like, "you click on x number of blue squares and you completed round y"
 
 
